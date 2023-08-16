@@ -1,0 +1,6 @@
+apple
+black
+upper
+snake
+learn
+quake
