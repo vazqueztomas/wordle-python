@@ -6,13 +6,14 @@ from get_random_choice import get_random_choice
 def main():
     
     word = get_random_choice()
+    guesses = ["_" * 5] * 6 
 
-    for guess_num in range(1, 7):
-      guess = input(f"\nGuess {guess_num}: ").upper()
+    for idx in range(6):
+      guesses[idx] = input(f"\nGuess {idx + 1}: ").upper()
   
-      show_guess(guess, word)
-      if guess == word:
-         user_won_alert(guess)
+      show_guess(guesses[idx], word)
+      if guesses[idx] == word:
+         user_won_alert(guesses[idx])
          break
     else:
       game_over(word)
